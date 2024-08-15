@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev":"ts-node-dev src/index.ts",
+    "dev": "ts-node-dev src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "start": "node build/index.js"
@@ -16,9 +16,18 @@
     "install": "^0.13.0",
     "npm": "^10.8.2",
     "ts-node-dev": "^2.0.0",
+    "ts-standard": "^12.0.2",
     "typescript": "5.5.4"
   },
   "dependencies": {
     "express": "4.19.2"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "extends": [
+      "./node_modules/ts-standard/eslintrc.json"
+    ]
   }
 }
